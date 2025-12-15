@@ -1,0 +1,2 @@
+Guadalupe Mendoza Jimenez;74985123;1989-12-5;MED-23109;Ortodoncista;C:\Users\BurgGutz\eclipse-workspace\ProyectoVet\Dra.png
+Fernando Gabriel Lozano Tejada;7496012;1989-10-5;MED-8541;Dermatologo;C:\Users\BurgGutz\eclipse-workspace\ProyectoVet\Dueño.png

@@ -247,13 +247,8 @@ public class VeterinariaApp extends JFrame {
         acciones.add(btnInfo);
         acciones.add(btnEditar);
         acciones.add(btnHistorial);
-
-        // Foto (Simulada con un panel de color o icono si existiera la ruta)
-        /*JPanel foto = new JPanel();
-        foto.setPreferredSize(new Dimension(100, 100));
-        foto.setBackground(Color.LIGHT_GRAY);
-        foto.add(new JLabel("FOTO"));*/
-     // Usamos el método ayudante, pasamos la ruta y el tamaño (100x100)
+        
+        // Usamos el método ayudante, pasamos la ruta y el tamaño (100x100)
         JLabel foto = cargarImagen(p.rutaFotoPaciente, 100, 100);
 
         card.add(foto, BorderLayout.WEST);
@@ -391,12 +386,40 @@ public class VeterinariaApp extends JFrame {
                     datos.add(new JLabel("CI: " + m.ci));
                     
                     JPanel btns = new JPanel();
-                    btns.add(new JButton("Información"));
-                    btns.add(new JButton("Editar"));
+                 // --- CÓDIGO CORREGIDO PARA LOS BOTONES DE MÉDICOS ---
+
+                    
+                    //btns.add(new JButton("Información"));
+                    //btns.add(new JButton("Editar"));
+                    JButton btnInfo = new JButton("Información");
+                    JButton btnEditar = new JButton("Editar");
+
+                    // Acción del botón INFORMACIÓN
+                    btnInfo.addActionListener(ev -> JOptionPane.showMessageDialog(this, 
+                        "Datos del Médico:\n" +
+                        "Nombre: " + m.nombre + "\n" +
+                        "CI: " + m.ci + "\n" +
+                        "Matrícula: " + m.matricula + "\n" +
+                        "Especialidad: " + m.especialidad + "\n" +
+                        "Fecha Nac: " + m.fechaNacimiento
+                    ));
+
+                    // Acción del botón EDITAR
+                    btnEditar.addActionListener(ev -> {
+                        // Reutilizamos el formulario de médico pasándole el objeto 'm' actual
+                        mainPanel.add(crearFormularioMedico(m), "EDIT_MEDICO");
+                        mostrarVista("EDIT_MEDICO");
+                    });
+
+                    btns.add(btnInfo);
+                    btns.add(btnEditar);
+
+                    // --------------------------------------------------------
+                    
                     
                     // Cargamos la foto del médico un poco más pequeña (80x80)
+                    
                     card.add(cargarImagen(m.rutaFoto, 80, 80), BorderLayout.WEST);
-                    //card.add(new JLabel("[FOTO]"), BorderLayout.WEST);
                     card.add(datos, BorderLayout.CENTER);
                     card.add(btns, BorderLayout.SOUTH);
                     
