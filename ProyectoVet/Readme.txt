@@ -1,0 +1,3 @@
+Este proyecto es un sistema de veterinaria en el cual se puede registrar mascotas, medicos y ver historiales.  Para el uso es necesario 
+descargar todos los archivos .java los cuales tienen el proyecto y para la  ejecución se necesita un copilador de java para que se abra.
+A la hora de uso se puede poner todo tipo de datos del medico o mascotas, editar y borrarlas; si se desea usar una imagen para un registro se necesita descargar la imagen y ponerlo junto a los archivos para que se pueda usar. Se podría usar tranquilamente, pero aun se necesitaría algo de ayuda al ser aun algo complejo para empezar su uso o poner imágenes de las mascotas o medicos.
