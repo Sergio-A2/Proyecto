@@ -1,0 +1,2 @@
+P-9878;Timmy;C:\Users\BurgGutz\eclipse-workspace\ProyectoVet\Timmy.png;Ale;C:\Users\BurgGutz\eclipse-workspace\ProyectoVet\Timmy.png;123456;Obrajes;2019-11-04;Chapa
+H;Hoy vino a revisarse una picason, se quedo que es tan solo una alergia en consecuencia a la infesta de pulguitas;2025-12-13
